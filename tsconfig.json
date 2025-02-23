@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2024", // 编译后的目标版本
+    "noImplicitAny": true, // 不允许隐式的any类型
+    "noImplicitThis": true, // 不允许隐式的this类型
+    "experimentalDecorators": true, // 启用装饰器
+    "moduleResolution": "nodenext", // 指定模块解析策略
+    "module": "nodenext", // 指定模块系统
+    "esModuleInterop": true, // 允许在CommonJS模块中使用export = 和 import = require()
+    "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入
+    "typeRoots": ["typings", "node_modules/@types"], // 指定查找类型声明文件的路径
+    "baseUrl": "./", // 解析非相对模块的基准目录
+    "paths": { // 模块名到基于baseUrl的路径映射的列表
+      "@interfaces/*": ["interface/*"], // @interface/* 映射到 interface/* 目录
+      "@config/*": ["config/*"], // @config/* 映射到 config/* 目录
+      "@middlewares/*": ["middlewares/*"], // @middlewares/* 映射到 middlewares/* 目录
+    },
+  },
+  "include": [
+    "**/*" // 包含所有文件
+  ]
+}
