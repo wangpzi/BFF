@@ -15,6 +15,7 @@ class ErrorHandler {
     });
     app.use(async (ctx: Context, next: () => Promise<unknown>) => {
       await next();
+      console.log(ctx.status, 'ctx.status');
       if (404 != ctx.status) return;
       ctx.body = '404';
     });
