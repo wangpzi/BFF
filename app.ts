@@ -20,7 +20,7 @@ import { historyApiFallback } from 'koa2-connect-history-api-fallback';
 // 注意，如果用aws是不能自己指定日志文件夹的
 // 日志系统
 configure({
-    appenders: { cheese: { type: 'file', filename: `${__dirname}/logs/yd.log` } },
+    appenders: { cheese: { type: 'file', filename: `${__dirname}/logs/BFF.log` } },
     categories: { default: { appenders: ['cheese'], level: 'error' } }
 });
 
@@ -64,7 +64,11 @@ app.use(historyApiFallback({ index: '/', whiteList: ['/api'] }));
 // 让所有的路由全部生效
 app.use(loadControllers(`${__dirname}/routers/*.ts`));
 
-// 监听端口号
-app.listen(port, () => {
-    console.log('原神启动');
-});
+if (process.env.NODE_ENV == 'development') {
+    // 监听端口号
+    app.listen(port, () => {
+        console.log('原神启动');
+    })
+}
+
+export default app;
