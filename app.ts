@@ -1,3 +1,5 @@
+/// <reference path="./typings/koa-swig.d.ts" />
+
 import { addAliases } from 'module-alias';
 addAliases({
     '@root': __dirname,
