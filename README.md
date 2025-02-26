@@ -33,6 +33,12 @@ BFF
 ## 路由
 1. 前端路由 /about
 2. 后端路由 /api/list
+
+## 版本
+node 20.13.1
+pm2 5.4.3
+## 错误提示
+1. 如果pm2 logs 报ts-node没找到，可以试试全局安装ts-node
 ### 技术点
 **DI (Dependency Injection 依赖注入)**  
 将对象依赖关系从内部创建转为**外部传递**，降低耦合度。  
