@@ -30,6 +30,9 @@ BFF
    git clone <仓库地址>
    ```
 
+## 路由
+1. 前端路由 /about
+2. 后端路由 /api/list
 ### 技术点
 **DI (Dependency Injection 依赖注入)**  
 将对象依赖关系从内部创建转为**外部传递**，降低耦合度。  
